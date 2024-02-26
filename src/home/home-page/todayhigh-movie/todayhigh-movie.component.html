@@ -1,0 +1,32 @@
+<!-- 今日票房 -->
+<section>
+    <h3 style="color: red;">今日票房</h3>
+    <div>
+    </div>
+    <div *ngFor="let todayData of NowData">
+        <!-- <a *ngIf="NowData[0]" style="display: flex;margin-bottom: 10px;width: 80%;height: 60px;border: 1px solid rgb(221, 221, 221);">
+            <img style="width: 100px;height: 59px;overflow: hidden;margin-right: 10px;" src="" alt="?">
+            <span style="font-size: 11px;position: absolute;color: red;margin:2px;" nz-icon nzType="trophy" nzTheme="outline"></span>
+            <span>
+                <div style="line-height: 30px;font-size: 14px;color: black;">{{NowData[0].name}}</div><div style="font-size: 11px;color: red;">{{NowData[0].ordernum}}</div>
+            </span>
+        </a> -->
+
+        <a class="hover-today" style="display:flex;position: relative;;line-height: 40px;width:80%;height: 40px;" >
+            <span style="width: 20px;"></span>
+            <span style="font-size: 14px;color: black;">{{todayData.name}}</span>
+            <span style="position: absolute;right: 10px;color: red;font-size: 11px;">{{todayData.ordernum}}</span>
+        </a>
+    </div>
+
+    <div style="margin-top: 20px;display: flex;position: relative;height: 72px;;width: 80%;border: 1px solid rgb(220, 220, 220);">
+        <span style="width: 25px;height: 70px;margin-right: 10px;text-align: center;color: white;font-size: 12px;padding-right: 3px;writing-mode:vertical-rl;background: red;">今日大盘</span>
+        <span style="">
+            <span style="font-size: 20px;line-height: 40px;color: red;">总售票数{{ordernumLengths}}</span>
+            <span style="color: red;font-size: 11px;"></span>
+            <span style="font-size: 11px;color: red;position: absolute;right: 10px;top: 20%;">查看更多></span>
+            <div style="color: rgb(170, 170, 170);font-size: 11px;">{{newdate}} 猫眼专业版实时票房数据</div>
+        </span>
+    </div>
+
+</section>

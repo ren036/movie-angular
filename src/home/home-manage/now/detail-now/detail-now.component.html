@@ -1,0 +1,30 @@
+<section>
+    <h1>电影详情</h1>
+    <div style="padding: 20px;">
+    <div style="display: flex;">
+        <div style="margin-right: 20px;"><img style="width: 100px;height: 120px;;" [src]="data.icon" alt=""></div>
+        <div>
+            <div><h1>名字{{data.name}}</h1></div>
+            <div>{{data.releasetime}}上映</div>
+            <div style="display: flex;">
+                <div><span (click)="addLike()"  nz-icon [nzType]="'heart'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#eb2f96'"></span>喜欢{{data.like}}
+                <span (click)="clearLike()" style="height: 12px;width: 20px;background-color: rgb(210, 210, 210);border-radius: 5px;">归零</span></div>
+                <div style="margin:0 10px;" (click)="openComment()"><button >新增评价</button></div>
+            </div>
+            <div>订票数{{data.ordernum}}<button (click)="openOrder()">查看订单</button></div>
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <div *ngFor="let comment of data.comment">
+        <div style="margin: 10px;">
+        <div style="font-weight: bold;"><span nz-icon nzType="reddit" nzTheme="outline"></span>
+            {{comment.name}}</div>
+        <div style="margin-left: 10px;color: rgb(67, 67, 67);">{{comment.description}}</div>
+    </div>
+</div>
+</div>
+</section>

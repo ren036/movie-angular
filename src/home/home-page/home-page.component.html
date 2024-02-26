@@ -1,0 +1,25 @@
+<section style="display: flex;flex-wrap: wrap;">
+    <a [routerLink]="['/homemanage']" style="position: absolute;right: 0;" >管理后台</a>
+    <!-- 首页 -->
+    <div style="width: 60%;">
+        <!-- 正在热映 -->
+        <app-now-movie></app-now-movie>
+        <br>
+        <br>
+        <!-- 即将上映 -->
+        <app-upcoming-movie></app-upcoming-movie>
+    </div>
+    <div style="width: 8%;"></div>
+    <div style="width: 32%;">
+        <!-- 今日票房高 -->
+        <app-todayhigh-movie></app-todayhigh-movie>
+        <br>
+        <br>
+        <!-- 最受期待 -->
+        <app-expectation-movie></app-expectation-movie>
+        <br>
+        <br>
+    </div>
+    <router-outlet></router-outlet>
+
+</section>

@@ -1,0 +1,36 @@
+<section style="padding: 20px;">
+    <h2>新增影片</h2>
+    <form style="margin-left:50px" (submit)="submitForm()" #form="ngForm">
+        <div style="margin-bottom: 5px;display: flex;">
+            <label style="width: 70px;" for="time">时间</label>
+            <!-- <nz-date-picker name="time" nzShowTime nzFormat="yyyy-MM-dd HH:mm:ss" [(ngModel)]='BuyForm.time'
+               ></nz-date-picker> -->
+               <nz-select name="site" nzShowSearch nzAllowClear nzPlaceHolder="请选择日期" [(ngModel)]="BuyForm.time">
+                <nz-option nzLabel="2024-02-26" nzValue="2024-02-26">
+                </nz-option>
+                <nz-option nzLabel="2024-02-27" nzValue="2024-02-27"></nz-option>
+                <nz-option nzLabel="2024-02-28" nzValue="2024-02-28"></nz-option>
+            </nz-select>
+
+        </div>
+        <div style="margin-bottom: 5px;display: flex;">
+            <label style="width: 70px;" for="site">地点</label>
+            <nz-select name="site" nzShowSearch nzAllowClear nzPlaceHolder="请选择地点" [(ngModel)]="BuyForm.site">
+                <nz-option nzLabel="河东区" nzValue="河东区"></nz-option>
+                <nz-option nzLabel="河西区" nzValue="河西区"></nz-option>
+                <nz-option nzLabel="河北区" nzValue="河北区"></nz-option>
+            </nz-select>
+        </div>
+        <div style="margin-bottom: 5px;display: flex;">
+            <label style="width: 70px;" for="seat">座位</label>
+            <nz-radio-group name="seat" [(ngModel)]="BuyForm.seat">
+                <label nz-radio nzValue="1"></label>
+                <label nz-radio nzValue="2"></label>
+                <label nz-radio nzValue="3"></label>
+                <label nz-radio nzValue="4"></label>
+            </nz-radio-group>
+        </div>
+        <button [disabled]="!form.valid" type="submit" class="primary">添加</button>
+
+    </form>
+</section>

@@ -1,0 +1,19 @@
+<section  style="padding: 20px;">
+    <h2>新增影片</h2>
+    <form style="margin-left:50px" (submit)="submitForm('success')" #form="ngForm">
+      <div style="margin-bottom: 5px;display: flex;">
+        <label style="width: 70px;" for="name">电影名</label>
+        <input name="firstName" id="name" type="text" [(ngModel)]="UpcomingDataForm.name" required #firstName="ngModel">
+      </div>
+      <div style="margin-bottom: 5px;display: flex;">
+        <label style="width: 70px;" for="icon">图片</label>
+        <input name="icon" id="icon" type="file" (change)="onFileSelected($event)" [(ngModel)]="UpcomingDataForm.icon">
+      </div>
+      <div style="margin-bottom: 5px;display: flex;">
+        <label style="width: 70px;" for="description">简介</label>
+        <input name="description" id="icon" type="text" [(ngModel)]="UpcomingDataForm.description">
+      </div>
+      <button [disabled]="!form.valid" type="submit" class="primary">添加</button>
+  
+    </form>
+  </section>

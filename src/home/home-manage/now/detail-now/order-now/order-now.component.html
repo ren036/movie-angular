@@ -1,0 +1,14 @@
+<section>
+    <h1>电影详情</h1>
+    <div style="padding: 20px;">
+    <div *ngFor="let order of orderData" style="display: flex;">
+        <div style="height: 100px;width: 500px;background-color: aliceblue;border-radius: 10px;margin-top: 10px;">
+            <div>预定开场时间：{{order.time}}</div>
+            <div>所选地点：{{order.site}}</div>
+            <div>座位号：{{order.seat}}</div>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+</section>

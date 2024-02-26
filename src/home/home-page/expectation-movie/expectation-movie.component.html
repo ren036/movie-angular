@@ -1,0 +1,54 @@
+<!-- 最受期待 -->
+<section>
+    <div style="width: 80%;">
+        <div style="display: flex;justify-content:space-between;line-height: 34px;">
+            <h3 style="color: rgb(236, 161, 42);">最受期待</h3>
+            <a style="color:  rgb(236, 161, 42);font-size: 11px;">查看完整榜单></a>
+        </div>
+        <!-- <div *ngFor="let movieData of MoviesData">
+            <a style="display: flex;margin-bottom: 10px;width: 100%;height: 140px;border: 1px solid rgb(221, 221, 221);">
+                <img style="width: 100px;height: 139px;overflow: hidden;margin-right: 10px;"
+                    src="" alt="?">
+                    <span style="width: 15px;height: 15px;background: rgb(236, 161, 42);color: aliceblue;position: absolute;padding: 0;">
+                    <i style="position: absolute;top: -3px;left: 2px;">1</i></span>
+                <span>
+                    <div style="font-size: 14px;color: black;margin-top: 38px;line-height: 25px;">{{movieData.name}}</div>
+                    <div style="color: rgb(204, 204, 204);font-size: 11px;">{{movieData.releasetime}}</div>
+                    <div style="font-size: 10px;color: rgb(236, 161, 42);">{{movieData.like}}</div>
+                </span>
+            </a>
+        </div> -->
+
+        <!-- <div style="display: flex;column-gap:6%;">
+            <a style="display: flex;flex-wrap: wrap;margin-bottom: 10px;width: 47%;height: 140px;border: 1px solid rgb(221, 221, 221);">
+                <img style="width: 100%;height: 100px;overflow: hidden;border: 1px solid red;"
+                    src="" alt="?">
+                    <span style="width: 15px;height: 15px;background: rgb(236, 161, 42);color: aliceblue;position: absolute;padding: 0;">
+                    <i style="position: absolute;top: -3px;left: 2px;">2</i></span>
+                <div style="margin-left: 10px;">
+                    <div style="font-size: 12px;color: black;">名字</div>
+                    <div style="font-size: 10px;color: rgb(236, 161, 42);">喜欢</div>
+                </div>
+            </a>
+            <a style="display: flex;flex-wrap: wrap;margin-bottom: 10px;width: 47%;height: 140px;border: 1px solid rgb(221, 221, 221);">
+                <img style="width: 100%;height: 100px;overflow: hidden;border: 1px solid red;"
+                    src="" alt="?">
+                    <span style="width: 15px;height: 15px;background: rgb(236, 161, 42);color: aliceblue;position: absolute;padding: 0;">
+                    <i style="position: absolute;top: -3px;left: 2px;">3</i></span>
+                <div style="margin-left: 10px;">
+                    <div style="font-size: 12px;color: black;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">fndjdkfjkfkddkgdg名字</div>
+                    <div style="font-size: 10px;color: rgb(236, 161, 42);">喜欢</div>
+                </div>
+            </a>
+
+        </div> -->
+        <div *ngFor="let movies of MoviesData">
+        <a class="hover-today" style="display:flex;position: relative;;line-height: 40px;height: 40px;" >
+            <span style="width: 20px;"></span>
+            <span style="font-size: 14px;color: black;">{{movies.name}}</span>
+            <span style="position: absolute;right: 10px;color: red;font-size: 11px;">{{movies.like}}</span>
+        </a>
+    </div>
+
+    </div>
+</section>

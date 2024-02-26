@@ -1,0 +1,19 @@
+<!-- 即将上映的 -->
+<section>
+    <div>
+        <div style="display: flex;justify-content:space-between;line-height: 34px;">
+            <h3 style="color: red;">即将上映（部）</h3>
+            <div>全部></div>
+        </div>
+        <div style="display: flex;flex-wrap: wrap;row-gap: 15px;column-gap: 15px;">
+            <div *ngFor="let upcomingData of UpcomingData" (click)="DetailNow(upcomingData)" style="position: relative;">
+                <img style="width: 100px;height: 120px;;" [src]="upcomingData.icon" alt="">
+                <div style="position: absolute;bottom: 0px;padding-left:10px;width: 100%;
+                height: 30px;background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(0, 0, 0));font-size: 16px;color: #fff;font-weight: bold;opacity: 0.8;">
+                <span style="opacity: 1;">{{upcomingData.name}}</span></div>
+                <!-- <div>{{nowData.details.createtime}}</div> -->
+            </div>
+
+        </div>
+    </div>
+</section>

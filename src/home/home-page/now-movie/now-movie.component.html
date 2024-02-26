@@ -1,0 +1,22 @@
+<!-- 正在热映 -->
+<section>
+    <div>
+        <div style="display: flex;justify-content:space-between;line-height: 34px;">
+            <h3 style="color: red;">正在热映（部）</h3>
+            <div>全部></div>
+        </div>
+        <div style="display: flex;flex-wrap: wrap;row-gap: 15px;column-gap: 15px;">
+            <div *ngFor="let nowData of NowData"  style="position: relative;">
+                <div (click)="DetailNow(nowData)">
+                <img style="width: 100px;height: 120px;;" [src]="nowData.icon" alt="">
+                <div style="position: absolute;bottom: 30px;padding-left:10px;width: 100%;
+                height: 30px;background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(0, 0, 0));font-size: 16px;color: #fff;font-weight: bold;opacity: 0.8;"><span style="opacity: 1;">{{nowData.name}}</span></div></div>
+                <div (click)="openBuy()" class="hover-now" style="width: 100px;height: 30px;border:1px solid rgb(223, 223, 223);
+                border-top:none;text-align: center;line-height: 30px;color: red;">购票</div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
