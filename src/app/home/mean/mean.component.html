@@ -1,0 +1,20 @@
+<section >
+  <div class="fixed-section">
+  <div style="height: 50px;display: flex;">
+    <img src="../../assets/maoyan-logo.png" alt="" style="height: 50px;">
+    <ul nz-menu nzMode="horizontal">
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['/homepage']">首页</a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="['/homemanage']" >管理后台</a>
+      </li>
+    </ul>
+  </div>
+
+  <nz-divider></nz-divider>
+</div>
+  <div style="margin-top: 60px;">
+<router-outlet></router-outlet>
+</div>
+</section>

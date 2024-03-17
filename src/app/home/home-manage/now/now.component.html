@@ -1,0 +1,28 @@
+<!-- 正在热映 -->
+<section>
+    <div>
+    <button (click)="nowOpen()" nz-button nzType="primary" nzShape="round">添加影片</button></div>
+    <nz-table #basicTable [nzData]="NowData" style="height:calc(100vh - 200px);overflow-y: auto;">
+        <thead>
+            <tr>
+                <th>电影名</th>
+                <th>电影海报</th>
+                <th>简介</th>
+                <th>上映时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of NowData">
+                <td>{{ data.name }}</td>
+                <td> <img style="width: 100px;height: 120px;;" [src]="data.icon" alt=""></td>
+                <td>{{data.description}}</td>
+                <td>{{ data.releseTime }}</td>
+                <td>
+                    <a (click)="offNow(data)">删除电影</a>
+                    <span (click)="openOrder()">查看订单</span>
+                </td>
+            </tr>
+        </tbody>
+    </nz-table>
+</section>

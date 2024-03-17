@@ -1,0 +1,12 @@
+.fixed-button {  
+    position: fixed;  
+    top: 20px; /* 根据你的布局调整位置 */  
+    right: 20px; /* 根据你的布局调整位置 */  
+    z-index: 999; /* 确保按钮在其他内容之上 */  
+  }
+  .ant-table-thead > tr > th {  
+    position: sticky;  
+    top: 0; /* 当元素滚动到视口顶部时，开始应用固定定位 */  
+    z-index: 1; /* 确保表头在其他内容之上 */  
+    background-color: #fff; /* 确保表头背景与页面背景不同 */  
+  }
